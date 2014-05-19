@@ -1,0 +1,42 @@
+<? :extend('index') ?>
+
+<? :block('content') ?>
+use php1: <?= 'php1' ?> 
+use php2: <?= $_SERVER.REQUEST_METHOD ?> 
+vars:     Hello ~~:escape($world)~ 
+include:  Hello ~:include("child")~ 
+capture:  ~:capture("part")~Hello~:endcapture()~~~$part~ World! 
+escape:   ~~:escape($html)~ 
+escaped tilde: \~ 
+show also backslash: \\~ 
+~eval(':include("child");')~ 
+
+:repeat
+~$data = array(1,2)~
+~:repeat(2)~
+~:repeat(3)~
+Hello ~~array_shift($data)~
+~:endrepeat()~
+~:endrepeat()~
+
+
+:loop
+~$data = array(1,2,3,4,5,6)~
+~:loop(2)~
+~:loop(3)~
+Hello ~~array_shift($data)~
+~:endloop()~
+~:endloop()~
+
+
+:capture
+~:capture('capture_test')~
+Hello World
+~:endcapture()~
+~~$capture_test~
+
+Inheritance with branches:
+~:render('sub/inheritance', array('world'=>'First'))~ 
+~:render('sub/inheritance')~ 
+~:render('sub/inheritance', array('world'=>'Third'))~
+<? :endblock() ?>

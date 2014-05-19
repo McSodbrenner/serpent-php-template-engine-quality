@@ -1,0 +1,7 @@
+Test-Suite
+
+/* The sleep should not occur because this block is getting overwritten and so should not be executed. */
+
+<? :block('content') ?>
+~sleep(2);~
+<? :endblock() ?>

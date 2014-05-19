@@ -1,0 +1,11 @@
+{
+	"name": "mcsodbrenner/serpent_unittest",
+	"description": "Serpent Unit Test",
+	"type": "project",
+	"license": "LGPL-3.0",
+	"require": {
+		"php": ">=5.3",
+		"lastcraft/simpletest": "dev-patch-vierbergenlars",
+		"mcsodbrenner/serpent": "dev-trunk"
+	}
+}
