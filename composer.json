@@ -9,6 +9,6 @@
 		"dflydev/markdown": "v1.0.3"
 	},
     "autoload": {
-    	"psr-0": { "McSodbrenner\\Serpent\\": "../trunk" }
+    	"psr-4": { "McSodbrenner\\Serpent\\": "../serpent-php-template-engine/src/" }
     }
 }

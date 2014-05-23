@@ -7,7 +7,7 @@ install via https://packagist.org/packages/mcsodbrenner/serpent
 
 class TestDefault extends UnitTestCase {
 	public function setUp() {
-		include_once('../trunk/McSodbrenner/Serpent/Autoloader.php');
+		require_once('vendor/autoload.php');
 
 		// init serpent
 		$dir = dirname(__FILE__).'/';
